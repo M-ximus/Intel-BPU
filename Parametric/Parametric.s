@@ -1,7 +1,7 @@
 .section .text # Instructions
 .globl _start
 
-.equ PARAMETER, 9
+.equ PARAMETER, 9 # I use 2, 4 and 9
 
 _start:
 

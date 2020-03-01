@@ -1,7 +1,7 @@
 .section .rodata # Read-only data
 
 rand_data:
-    .word 0xB5FA8C75 # 4 random 8-bit numbers to create random values 
+    .word 0x7C5A184E # 4 random 8-bit numbers to create random values 
 
 
 .section .text # Instructions
@@ -16,7 +16,7 @@ main_loop:
 
     mv t2, t0 # copy for logic operations
     
-    srl t2, t1
+    srl t2, t2, t1 # t2 = t2 >> t1
     andi t2, t2, 1 # take curent bit from copy
 
     bnez t2, br_taken

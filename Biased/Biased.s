@@ -8,7 +8,7 @@ main_loop:
 # smth after uncoditional branch
     nop
 
-    bnez zero, br_taken
+    beqz zero, br_taken
 
     nop
 

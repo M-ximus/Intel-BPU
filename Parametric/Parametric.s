@@ -1,19 +1,21 @@
 .section .text # Instructions
 .globl _start
 
-.equ PARAMETER, 2
+.equ PARAMETER, 9
 
 _start:
 
-    mv t0, zero
+    nop # for fun
 
 main_loop:
 
-    addi t0, PARAMETER
+    addi t0, zero, PARAMETER
     	
 br_taken:
 
-    subi t0, t0, 1
+# smth like for()
+
+    addi t0, t0, -1
     bnez t0, br_taken
 
 # loop end
